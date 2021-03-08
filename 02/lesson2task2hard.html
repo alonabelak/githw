@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="GET" enctype="multipart/form-data"></form>
+    <p><strong>General info</strong></p>
+    <p>Blocked input:</p>
+    <p><input type="text" disabled placeholder="You can't change me"></p>
+
+    <p>Weird text:</p>
+    <p><input type="text" readonly placeholder="Just read me"></p>
+
+    <p>Name of your hamster:</p>
+    <p><input type="text" name="name_of_pet" required placeholder="Bobby"></p>
+
+    <p>Your email</p>
+    <p><input type="email" placeholder="myemail@gmail.com"></p>
+    <p>Password:</p>
+    <p><input type="password"></p>
+    <p>Your birthday:</p>
+    <p><input type="date"></p>
+    <p>The age of your BFF:</p>
+    <p><input type="number"></p>
+    <p>Sex:</p>
+    <p> <label><input type="radio" name="gender" value="Male">Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+    </p>
+    <p>Social networks:</p>
+    <p><label><input type="checkbox" name="socialnetworks[]" value="Instagram">Instagram</label>
+        <label><input type="checkbox" name="socialnetworks[]" value="Facebook">Facebook</label>
+        <label><input type="checkbox" name="socialnetworks[]" value="LinkedIn">LinkedIn</label>
+    </p>
+    <p><strong>Another info</strong></p>
+    <p>Favourite color:</p>
+    <p><input type="color"></p>
+    <p>Telephone number</p>
+    <p><input type="tel"></p>
+    <p>Present time:</p>
+    <p><input type="time"></p>
+    <p>Link to your favourite website:</p>
+    <p><input type="url" placeholder="https.google.com"></p>
+    <p>Number from 1 to 10:</p>
+    <p><input type="range"></p>
+    <p>Send your photo:</p>
+    <p><input type="file"></p>
+    <p><strong>Not inputs:</strong></p>
+    <p>Favourite drinks:</p>
+    <select name="drinks">
+        <option value="">-=Select=-</option>
+        <option value="milk">Milk</option>
+        <option value="coffee">Coffee</option>
+        <option value="tea">Tea</option>
+        <option value="wine">Wine</option>
+        <option value="beer">Beer</option>
+    </select>
+    <p>Favourite drinks:</p>
+    <p><select name="drinks[]" multiple size="4">
+            <option value="">-=Select=-</option>
+            <option value="milk">Milk</option>
+            <option value="coffee">Coffee</option>
+            <option value="tea">Tea</option>
+            <option value="wine">Wine</option>
+            <option value="beer">Beer</option>
+        </select></p>
+    <p>Comments:</p>
+    <p>
+        <textarea maxlength="50" placeholder="Write any comments here up to 50 characters"></textarea>
+    </p>
+    <p><strong>Buttons</strong></p>
+    <form>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Press</button>
+        <button type="button" disabled>You can't press on me</button>
+    </form>
+
+</body>
+
+</html>
