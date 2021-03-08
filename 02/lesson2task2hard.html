@@ -9,7 +9,9 @@
 </head>
 
 <body>
-    <form action="#" method="GET" enctype="multipart/form-data"></form>
+    <form id="my_form"
+        onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+    </form>
     <p><strong>General info</strong></p>
     <p>Blocked input:</p>
     <p><input type="text" disabled placeholder="You can't change me"></p>
