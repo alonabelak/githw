@@ -34,6 +34,7 @@ main {
 .promo img {
     text-align: center;
     overflow: hidden;
+    width: 100%;
     
 }
 .content {
