@@ -7,7 +7,7 @@
 }
 
 
- body h1{
+ body h1 {
     color: #fff0f0;
     background-color:#a52a2a
      
@@ -45,11 +45,11 @@ main {
     text-align: center;
 }
 .listofcars li {
-    display: inline;
+    display:inline;
 
 }
 .listofcars li img {
-    border: 3px dashed;
+    border:3px dashed;
 
 }
 
