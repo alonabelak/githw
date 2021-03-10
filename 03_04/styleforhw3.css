@@ -33,6 +33,8 @@ main {
 }
 .promo {
     text-align: center;
+    width: 100%;
+    overflow: hidden;
     
 }
 .content {
