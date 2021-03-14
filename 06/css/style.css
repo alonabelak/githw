@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.container {
+    max-width: 1170px;
+    width: 90%;
+    padding-bottom: 65px;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+.container li {
+    display: inline-block;
+    width: 33.3333%;
+    margin: 0 -2px;
+    padding: 0 20px;
+    text-align: center;
+    
+}
+.container li span {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    
+    
+}
+.container li p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 25px;
+}
+.icon {
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 1px solid #1275b9;
+    background-color: #1275b9;
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+}
+
+
+.icon:hover {
+    background-color: #fff;
+}
+.icon_tablet {
+    background-position: 18px 15px;
+}
+.icon_tablet:hover {
+    background-position: 18px -63px;
+
+}
+.icon_set {
+    background-position: -92px 15px;
+}
+.icon_set:hover {
+    background-position: -92px -63px;
+}
+.icon_speed {
+    background-position: -211px 15px;
+}
+.icon_speed:hover {
+    background-position: -211px -63px;
+}
