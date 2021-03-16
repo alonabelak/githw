@@ -36,13 +36,13 @@
 }
 .container li span {
     font-size: 14px;
-    font-family:'ProximaNova';
+    font-family:'ProximaNova', sans-serif;
     text-transform: uppercase;
         
 }
 .container li p {
     font-size: 14px;
-    font-family:'ProximaNova';
+    font-family:'ProximaNova', sans-serif;
     padding-top: 25px;
 }
 .icon {
