@@ -2,9 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
 }
-
 body {
     background-color: #fff;
     font-family: 'Karla', sans-serif;
@@ -14,13 +12,11 @@ body {
 ul, ol {
     list-style: none;
 }
-
 .container {
     width: 90%;
     max-width: 940px;
     margin: 0 auto;
 }
-
 header {
     text-align: center;
     margin-top: 100px;
@@ -48,13 +44,11 @@ header h1 span {
     align-items: flex-start;
     flex-wrap: wrap;
     width: calc(33.3333% - 10px);
-
 }
 .soc_list li {
     width: 140px;
     height: 140px;
     margin-bottom: 20px;
-
 }
 .soc_list li a {
     display: flex;
@@ -64,9 +58,7 @@ header h1 span {
     height: 100%;
     border: 1px solid #999;
     border-radius: 4px;
-
 }
-
 .soc_list li a svg {
     max-width: 53px;
     max-height: 53px;
@@ -82,7 +74,6 @@ header h1 span {
 .twitter {
     fill: #00aced;
     border-color:#00aced;
-
 }
 .twitter:hover {
     fill: #fff;
@@ -91,7 +82,6 @@ header h1 span {
 .instagram {
     fill: #517fa4;
     border-color: #517fa4;
-
 }
 .instagram:hover {
     fill: #fff;
@@ -107,7 +97,6 @@ header h1 span {
 }
 .form_wrap {
     width: calc(66.6666% - 10px);
-
 }
 .row {
     display: flex;
@@ -117,7 +106,6 @@ header h1 span {
 .form_wrap .row:last-child {
     margin-bottom: 0;
 }
-
 .colum {
     width: calc(50% - 10px);
     position: relative;
@@ -138,20 +126,17 @@ textarea {
     background-color: #fff;
     border: 1px solid #bababa;
     border-radius: 4px;
-
 }
 textarea {
     padding: 15px 22px;
     height: 160px;
     resize: none;
     padding-right: 50px;
-
 }
 ::placeholder {
     font-style: italic;
 
 }
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
@@ -168,7 +153,6 @@ button {
     border-radius: 0 4px 4px 0;
     border: none;
     cursor: pointer;
-
 }
 button:hover {
     background-color: #38e9cb;
@@ -177,6 +161,4 @@ button svg {
     height: 18px;
     width: 18px;
     fill: #fff;
-    
-    
 }
