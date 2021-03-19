@@ -66,9 +66,44 @@ header h1 span {
     border-radius: 4px;
 
 }
+
 .soc_list li a svg {
     max-width: 53px;
     max-height: 53px;
+}
+.facebook {
+    fill: #3b5988;
+    border-color: #3b5988;
+}
+.facebook:hover {
+    fill: #fff;
+   background-color: #3b5988;
+}
+.twitter {
+    fill: #00aced;
+    border-color:#00aced;
+
+}
+.twitter:hover {
+    fill: #fff;
+    background-color: #00aced;
+}
+.instagram {
+    fill: #517fa4;
+    border-color: #517fa4;
+
+}
+.instagram:hover {
+    fill: #fff;
+    background-color: #517fa4;
+}
+.dribbble {
+    fill: #ff0084;
+    border-color: #ff0084;
+}
+.dribbble:hover {
+    fill: #fff;
+    background-color: #ff0084;
 }
 .form_wrap {
     width: calc(66.6666% - 10px);
