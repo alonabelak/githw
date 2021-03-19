@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    padding: 50px 50px;
+}
+header {
+    text-align: center;
+    padding-bottom: 100px;
+}
+header h4 {
+   font-family: 'Montserrat', sans-serif;
+   text-transform: uppercase;
+   font-size: 12px;
+   font-weight: 700;
+   color: #a2a7ae;
+   padding-bottom: 30px;
+}
+header h2 {
+   font-family: 'Montserrat Bold', sans-serif;
+   text-transform: uppercase;
+   font-size: 48px;
+   font-weight: 400;
+   color: #0ec8cb;
+    letter-spacing: 3px;
+}
+.container_p {
+    text-align: justify;
+    width: 457px;
+    margin: 35px auto;
+}
+header p {
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    color: #a2a7ae; 
+}
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 940px;
+    max-width: 100%;
+    margin: 0 auto;    
+    text-align: center;
+}
+table td {
+    width: 25%;
+}
+.icon {
+    padding: 65px 0 ;   
+    margin: 20px 0; 
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat; 
+}
+.icon_anchor {
+    background-position: 80px 10px;
+}
+
+.icon_diamond {
+    background-position: -153px 10px;
+}
+.icon_glasses {
+    background-position: -380px 10px;
+}
+.icon_tv {
+    background-position: -625px 10px;
+}
+.cards  {
+    padding-top: 50px;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    box-shadow: #f4f4f4;
+}
+.tablefix {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 40px;
+    
+}
+.name {
+    text-transform: uppercase;
+    color: #1b1b1b;
+    font-size: 21px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+    font-family: 'Montserrat Regular', sans-serif;
+    font-weight: 400;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards p {
+    font-family: 'PTSans Semi-bold', sans-serif;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    color: #777777;
+    padding: 0 36px 85px;
+    padding-top: 30px;
+}
+.cards:hover {
+    background-color: #0ec8cb;
+}
+.cards:hover .icon_anchor {
+    background-position: 80px -175px;
+}
+.cards:hover .icon_diamond {
+    background-position: -153px -175px;
+}
+.cards:hover .icon_glasses {
+    background-position: -380px -175px;
+}
+.cards:hover .icon_tv {
+    background-position: -625px -175px;
+}
+.cards:hover .name {
+    background-color: #0ec8cb;
+    color: #fff;
+}
+.cards:hover p {
+    background-color: #0ec8cb;
+    color: #fff;
+}
+
+
+
+
