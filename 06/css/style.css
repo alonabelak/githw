@@ -22,8 +22,7 @@
 .container {
     max-width: 1170px;
     width: 90%;
-    padding-bottom: 65px;
-    padding-top: 50px;
+    padding: 50px 72px;
     margin: 0 auto;
 }
 .container li {
@@ -47,7 +46,6 @@
 }
 .icon {
     display: inline-block;
-    margin-bottom: 15px;
     width: 62px;
     height: 62px;
     border-radius: 50%;
@@ -56,8 +54,22 @@
     background-image: url(../img/sprite.png);
     background-repeat: no-repeat;
 }
+p {
+    margin-top: -10px;    
+    color: #000;
+    text-transform: uppercase;
+    font-family: 'ProximaNova Regular', sans-serif;
+    font-size: 14px;
+}
+.paragraph {
+    color: #9d9d9d;
+    text-transform: none;
+    font-family: 'ProximaNova Light', sans-serif;
+    font-size: 14px;
+    padding: 0 30px;
+    text-align: center;
 
-
+}
 .icon:hover {
     background-color: #fff;
 }
