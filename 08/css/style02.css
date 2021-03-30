@@ -28,12 +28,11 @@ html, body {
     
 }
 .big {
-    width: calc(65% - 20px);  
+    width: calc(65% - 12px);  
     background: url(../img/Untitled-8.png);
+    background-size: 100%;
     position: relative;
     
-          
-       
 }
 .big_text {
     position: absolute;
