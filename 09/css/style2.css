@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+
+}
+html, body {
+    font-family: 'Playfair Display', serif;
+    font-family: 'FuturaPt', sans-serif;
+    font-family: 'ProximaNova';
+    background-color: #464f54;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.black {
+    background-color: #181818;
+    max-width: 1035px;
+    width: 90%;
+    height: 190px;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    padding: 50px 0 0 60px;
+}
+.title {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #767676;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.text{
+   background-color: #181818;
+   width: 100%;
+   color: #fefefe;
+   font-size: 48px;
+   font-family: 'Playfair Display', serif;
+   cursor: text;  
+   outline: none;
+   border: none;
+   border-bottom: #303030 2px solid;
+   
+}
+.yellow {
+    background-color: #f9bf2d;
+    position: absolute;
+    right: 0;
+    top: 225px;
+    max-width: 970px;
+    width: 80%;
+    height: 80px;
+    
+}
+.icon_list {
+    margin: 10px 0;
+}
+ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 13px -7px 13px 35px;
+    padding: 0;
+    text-align: center;
+}
+li span {
+    color: #fdfdfd;
+    opacity: 0.5;
+    font-size: 28px;
+}
+li span:hover {
+    color: #fdfdfd;
+    opacity: 1;
+}
+
+.white {
+    background-color: #fff;
+    max-width: 1140px;
+    width: 90%;
+    height: 750px;
+    margin: 150px 70px 0;
+}
+.content {
+    margin: 0 130px 0 70px;
+    padding: 200px 0 0 50px;
+    border-left: #e8eced 2px solid;
+}
+.date {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #b4b4b4;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+.big_title {
+    font-family: 'FuturaPt', sans-serif;
+    color: #2a2a2a;
+    font-size: 78px;
+    margin-top: -10px;
+    margin-bottom: -5px;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+
+}
+.italic {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #8f8f8f;
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 55px;
+    
+}
+.main_text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    font-size: 27px;
+    line-height: 38px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+.second {
+   padding: 20px 0;
+}
+.main_text span {
+    font-style: italic;
+}
