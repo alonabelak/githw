@@ -182,9 +182,11 @@ body {
 }
 .team_list > li.ch_4 .top_wrap .front {
   z-index: 2;
+  backface-visibility: hidden;
 }
 .team_list > li.ch_4 .top_wrap .back {
   transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
 .team_list > li.ch_4:hover .top_wrap {
   transform: rotateY(180deg);

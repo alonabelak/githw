@@ -230,10 +230,12 @@ body {
 
                 .front {
                     z-index: 2;
+                    backface-visibility: hidden;
                 }
 
                 .back {
                     transform: rotateY(180deg);
+                    backface-visibility: hidden;
                 }
             }
 
