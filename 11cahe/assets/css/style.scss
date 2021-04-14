@@ -1320,6 +1320,21 @@ footer {
                 padding: 20px 0;
             }
         }
+
+        .pictures_6 {
+            .foodpictures {
+                .pic_1 {
+                    .wrap {
+                        .back {
+                            h3 {
+                                padding-top: 25%;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .section_7 {
@@ -1367,6 +1382,29 @@ footer {
 }
 
 @media screen and (max-width:370px) {
+    .section_6 {
+
+        .pictures_6 {
+            .foodpictures {
+                .pic_1 {
+                    .wrap {
+                        .back {
+                            h3 {
+                                left: 5px;
+                                padding-top: 12%;
+                                font-size: 15px;
+                            }
+
+                            p {
+                                left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .section_7 {
         .info_7 {
             max-width: 320px;
