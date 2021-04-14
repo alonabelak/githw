@@ -6,43 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="assets/css/hamburger.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;700;900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+    <div id="mobile_menu_block">
+        <div class="mb_top"><div class="mob_logo">Cahee</div>
+        <button class="hamburger hamburger--slider" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        </div>
+               <nav class="mobile_menu">
+            <ul>
+                <li><a href="#section_1">Home</a></li>
+                <li><a href="#section_2">About</a></li>
+                <li><a href="#section_4">Services</a></li>
+                <li><a href="#section_5">Gallery</a></li>
+                <li><a href="#section_6">Blog</a></li>
+                <li><a href="#section_7">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menu_shadow"></div>
     <div class="maincontainer">
         <header>
             <div class="container">
                 <div class="logo">Cahee</div>
                 <nav class="main_menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#section_1">Home</a></li>
+                        <li><a href="#section_2">About</a></li>
+                        <li><a href="#section_4">Services</a></li>
+                        <li><a href="#section_5">Gallery</a></li>
+                        <li><a href="#section_6">Blog</a></li>
+                        <li><a href="#section_7">Contact</a></li>
                     </ul>
-
                 </nav>
+                <button class="hamburger hamburger--slider" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>      
         </header>
         <main>
-            <div class="section_1">
+            <div class="section_1" id="section_1">
                 <div class="info1">
                     <h2>Fresh Life</h2>
                     <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     <button>Get free now</button>
               </div>
             </div>
-            <div class="section_2">                
+            <div class="section_2" id="section_2">                
                 <div class="info2">
                     <h2>About Us</h2>
                     <p class="paragraph1">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
                     <p class="paragraph2">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
                 </div>
             </div>
-            <div class="section_3">
+            <div class="section_3" id="section_3">
                 <div class="buttons">
                    <div class="button"> 
                        <button class="btn">Online Shopping</button>
@@ -63,7 +88,7 @@
                 </div>
                 <h2>Our Services</h2>
             </div>
-            <div class="section_4">
+            <div class="section_4" id="section_4">
                 <div class="info_4">
                     <h2>Gallery</h2>
                     <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -83,7 +108,7 @@
                 </div>
                 <button>View More</button>
             </div>
-            <div class="section_5">
+            <div class="section_5" id="section_5">
                 <div class="info5">
                     <h2>Subscribe To Us</h2>
                     <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -93,7 +118,7 @@
                     <button>Subscribe</button>
                 </div>
             </div>
-            <div class="section_6">
+            <div class="section_6" id="section_6">
                 <div class="info_6">
                     <h2>Blog</h2>
                     <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
@@ -113,7 +138,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="pic_2">
+                        <li class="pic_1">
                             <div class="wrap">
                                 <div class="front">
                                     <img src="img/second6.png" alt="">
@@ -126,7 +151,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="pic_3">
+                        <li class="pic_1">
                             <div class="wrap">
                                 <div class="front">
                                     <img src="img/third6.png" alt="">
@@ -138,7 +163,6 @@
                                         <h3>Green Smoothies: Too Much of a Good Thing?</h3>
                                         <p>By Auskteez - 2 hours ago</p>                                    
                                     </div>
-
                                 </div>
                             </div>
                         </li>
@@ -146,7 +170,7 @@
                 </div>
                 <button>View more</button>
             </div>
-            <div class="section_7">
+            <div class="section_7" id="section_7">
                 <div class="info_7">
                     <h2>Contact</h2>
                     <p>For new projects, ideas, business or anything
@@ -193,6 +217,10 @@
                     $("header").removeClass("fixed");
                 }
 
+            });
+            $(".hamburger, #menu_shadow").click(function(){
+                $(".hamburger").toggleClass("is-active");
+                $("body").toggleClass("open");
             });
 
         });
