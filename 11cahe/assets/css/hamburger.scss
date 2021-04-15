@@ -23,9 +23,21 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     display: inline-block;
     cursor: pointer;
 
+    -webkit-transition-property: opacity, -webkit-filter;
+
+    transition-property: opacity, -webkit-filter;
+
+    -o-transition-property: opacity, filter;
+
     transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
+
+    transition-property: opacity, filter, -webkit-filter;
+    -webkit-transition-duration: 0.15s;
+         -o-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+         -o-transition-timing-function: linear;
+            transition-timing-function: linear;
 
     // Normalize (<button>)
     font: inherit;
@@ -38,7 +50,8 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
     &:hover {
         @if $hamburger-hover-use-filter==true {
-            filter: $hamburger-hover-filter;
+            -webkit-filter: $hamburger-hover-filter;
+                    filter: $hamburger-hover-filter;
         }
 
         @else {
@@ -49,7 +62,8 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     &.is-active {
         &:hover {
             @if $hamburger-hover-use-filter==true {
-                filter: $hamburger-active-hover-filter;
+                -webkit-filter: $hamburger-active-hover-filter;
+                        filter: $hamburger-active-hover-filter;
             }
 
             @else {
@@ -85,9 +99,17 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
         background-color: $hamburger-layer-color;
         border-radius: $hamburger-layer-border-radius;
         position: absolute;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        -o-transition-property: transform;
         transition-property: transform;
-        transition-duration: 0.15s;
-        transition-timing-function: ease;
+        transition-property: transform, -webkit-transform;
+        -webkit-transition-duration: 0.15s;
+             -o-transition-duration: 0.15s;
+                transition-duration: 0.15s;
+        -webkit-transition-timing-function: ease;
+             -o-transition-timing-function: ease;
+                transition-timing-function: ease;
     }
 
     &::before,
@@ -111,9 +133,17 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
         &::before {
             top: $hamburger-layer-height + $hamburger-layer-spacing;
+            -webkit-transition-property: opacity, -webkit-transform;
+            transition-property: opacity, -webkit-transform;
+            -o-transition-property: transform, opacity;
             transition-property: transform, opacity;
-            transition-timing-function: ease;
-            transition-duration: 0.15s;
+            transition-property: transform, opacity, -webkit-transform;
+            -webkit-transition-timing-function: ease;
+                 -o-transition-timing-function: ease;
+                    transition-timing-function: ease;
+            -webkit-transition-duration: 0.15s;
+                 -o-transition-duration: 0.15s;
+                    transition-duration: 0.15s;
         }
 
         &::after {
@@ -125,15 +155,19 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
         .hamburger-inner {
             $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
 
-            transform: translate3d(0, $y-offset, 0) rotate(45deg);
+            -webkit-transform: translate3d(0, $y-offset, 0) rotate(45deg);
+
+                    transform: translate3d(0, $y-offset, 0) rotate(45deg);
 
             &::before {
-                transform: rotate(-45deg) translate3d($hamburger-layer-width / -7, $hamburger-layer-spacing * -1, 0);
+                -webkit-transform: rotate(-45deg) translate3d($hamburger-layer-width / -7, $hamburger-layer-spacing * -1, 0);
+                        transform: rotate(-45deg) translate3d($hamburger-layer-width / -7, $hamburger-layer-spacing * -1, 0);
                 opacity: 0;
             }
 
             &::after {
-                transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg);
+                -webkit-transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg);
+                        transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg);
             }
         }
     }
