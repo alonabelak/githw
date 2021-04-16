@@ -18,10 +18,9 @@ body h2 {
   font-size: 90px;
 }
 
-.maincontainer {
-  width: 100%;
-  height: 100%;
-  max-width: 1700px;
+.container {
+  max-width: 1170px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -99,12 +98,10 @@ body h2 {
 }
 
 header {
-  max-width: 1700px;
   height: 150px;
   position: fixed;
   z-index: 999;
   width: 100%;
-  padding: 25px 50px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -120,6 +117,9 @@ header .container {
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
+  max-width: 1170px;
+  width: 90%;
+  margin: 0 auto;
 }
 header ul li {
   list-style: none;
@@ -164,7 +164,6 @@ header.fixed {
   box-shadow: 0 0 3px #999;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  margin-right: 0;
 }
 header.fixed .logo {
   font-size: 35px;
@@ -285,15 +284,18 @@ header .hamburger {
 
 .section_1 {
   background: url(../../img/img.png);
-  background-position: center;
+  background-position: bottom -100px center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
+}
+.section_1 .container {
+  max-width: 1170px;
+  width: 90%;
+  margin: 0 auto;
 }
 .section_1 .info1 {
   max-width: 500px;
-  width: 90%;
-  padding: 23% 0 175px 7%;
+  padding: 250px 0;
 }
 .section_1 .info1 h2 {
   font-family: "Raleway", sans-serif;
@@ -333,16 +335,22 @@ header .hamburger {
 
 .section_2 {
   background-color: #00b9b9;
-  background-image: url(../../img/imgraspberry.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  margin: -80px 0 0;
-  padding: 190px 0;
+}
+.section_2 .container {
+  max-width: 1170px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.section_2 img {
+  width: 50%;
 }
 .section_2 .info2 {
-  width: 32%;
-  height: 300px;
-  margin: 0 50%;
+  width: 50%;
+  align-self: center;
 }
 .section_2 .info2 h2 {
   font-family: "Raleway Bold", sans-serif;
@@ -364,15 +372,15 @@ header .hamburger {
   background-image: url(../../img/imgtomatoes.png);
   background-position: 80%;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
+}
+.section_3 .container {
+  padding: 120px 0;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .section_3 .buttons {
-  margin: 150px 0 150px 18%;
+  width: 50%;
 }
 .section_3 .buttons .button {
   width: 400px;
@@ -415,6 +423,7 @@ header .hamburger {
   color: #fff;
 }
 .section_3 h2 {
+  width: 50%;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,7 +434,6 @@ header .hamburger {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 auto;
   font-family: "Raleway", sans-serif;
 }
 
@@ -438,7 +446,8 @@ header .hamburger {
   text-align: center;
   margin: 0 auto;
   padding: 0 0 40px;
-  width: 590px;
+  max-width: 590px;
+  width: 90%;
 }
 .section_4 .info_4 h2 {
   font-family: "Raleway", sans-serif;
@@ -540,17 +549,16 @@ header .hamburger {
   color: #5585a2;
 }
 
-.section_5 {
+.section_5 .container {
+  padding: 100px 0;
   background-image: url(../../img/section5.png);
   background-size: cover;
   background-size: 100%;
   background-repeat: no-repeat;
-  padding: 10% 0;
 }
 .section_5 .info5 {
   max-width: 720px;
   width: 90%;
-  padding: 0 10%;
 }
 .section_5 .info5 h2 {
   font-family: "Raleway", sans-serif;
@@ -576,7 +584,6 @@ header .hamburger {
   justify-content: space-between;
   max-width: 770px;
   width: 90%;
-  margin: 0 10%;
 }
 .section_5 input {
   max-width: 570px;
@@ -637,9 +644,6 @@ header .hamburger {
   font-size: 17px;
   line-height: 25px;
 }
-.section_6 .pictures_6 {
-  padding: 0 10%;
-}
 .section_6 .pictures_6 .foodpictures {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,6 +654,7 @@ header .hamburger {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  padding-bottom: 50px;
 }
 .section_6 .pictures_6 .foodpictures > li {
   width: calc((100% / 3) - (60px / 3));
@@ -662,7 +667,7 @@ header .hamburger {
   content: "";
   display: block;
   width: 100%;
-  padding-top: 100%;
+  padding-top: 83%;
 }
 .section_6 .pictures_6 .foodpictures > li .wrap .front {
   position: absolute;
@@ -684,7 +689,7 @@ header .hamburger {
   left: 0;
   top: 0;
   width: 100%;
-  height: 83%;
+  height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(254, 254, 254, 0)), to(rgba(0, 0, 0, 0.9)));
   background: -o-linear-gradient(top, rgba(254, 254, 254, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
   background: linear-gradient(180deg, rgba(254, 254, 254, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
@@ -797,9 +802,8 @@ header .hamburger {
 }
 .section_7 .info_7 {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   width: 370px;
-  height: 160px;
 }
 .section_7 .info_7 h2 {
   font-family: "Raleway", sans-serif;
@@ -814,12 +818,12 @@ header .hamburger {
   line-height: 25px;
 }
 .section_7 .container_7 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  padding: 75px 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .section_7 .container_7 .inputsinfo {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -827,11 +831,11 @@ header .hamburger {
   -webkit-box-direction: normal;
   -ms-flex-flow: column;
   flex-flow: column;
-  padding: 0 15%;
 }
 .section_7 .container_7 .inputsinfo input {
   margin-bottom: 20px;
-  width: 500px;
+  max-width: 500px;
+  width: 90%;
   height: 50px;
   background-color: #00c4c473;
   padding-left: 10px;
@@ -841,6 +845,7 @@ header .hamburger {
   color: #fff;
   outline: none;
   border: none;
+  border-left: 5px solid transparent;
 }
 .section_7 .container_7 .inputsinfo input::-webkit-input-placeholder {
   color: #fff;
@@ -864,7 +869,8 @@ header .hamburger {
 .section_7 .container_7 .inputsinfo textarea {
   max-height: 250px;
   height: 250px;
-  width: 500px;
+  max-width: 500px;
+  width: 90%;
   max-width: 500px;
   background-color: #00c4c473;
   padding: 12px;
@@ -874,6 +880,7 @@ header .hamburger {
   color: #fff;
   outline: none;
   border: none;
+  border-left: 5px solid transparent;
 }
 .section_7 .container_7 .inputsinfo textarea::-webkit-input-placeholder {
   color: #fff;
@@ -894,7 +901,40 @@ header .hamburger {
   background-color: #00c4c4;
   border-left: 5px solid #355b82;
 }
+.section_7 .container_7 .inputsinfo button {
+  margin-top: 10px;
+  background-color: #00c4c4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 200px;
+  width: 90%;
+  height: 55px;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  outline: none;
+  border: 2px solid #5585a2;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.section_7 .container_7 .inputsinfo button:hover {
+  border: 2px solid #00c4c4;
+  background-color: #fff;
+  color: #00c4c4;
+}
 .section_7 .container_7 .contacts {
+  padding-left: 100px;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -971,10 +1011,6 @@ footer .info_footer .end span {
   .section_3 h2 {
     padding-left: 15px;
   }
-
-  .section_7 .container_7 .inputsinfo {
-    padding: 0 50px;
-  }
 }
 @media screen and (max-width: 1050px) {
   .section_6 .pictures_6 .foodpictures {
@@ -999,10 +1035,6 @@ footer .info_footer .end span {
     margin: 0 auto;
     width: 100%;
     padding: 0 100px;
-  }
-  .section_2 .info2 h2,
-.section_2 .info2 p {
-    color: #000;
   }
 
   .section_6 .pictures_6 .foodpictures li .wrap .back {
@@ -1090,6 +1122,18 @@ footer .info_footer .end span {
   }
   .section_4 .pictures .row2 img {
     width: calc((100% / 2) - (20px / 2));
+  }
+
+  .section_3 .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .section_3 .container .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media screen and (max-width: 808px) {
@@ -1203,9 +1247,6 @@ footer .info_footer .end span {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
   .section_7 .container_7 .contacts {
     padding: 30px 10px;
@@ -1255,12 +1296,9 @@ footer .info_footer .end span {
   .section_7 {
     padding: 0 0 40px;
   }
-  .section_7 .container_7 {
-    padding: 0;
-  }
   .section_7 .info_7 h2 {
     font-size: 50px;
-    padding: 20px 0;
+    width: 100%;
   }
 
   footer {
@@ -1278,7 +1316,7 @@ footer .info_footer .end span {
   }
 
   .section_7 .container_7 .inputsinfo {
-    padding: 0;
+    width: 100%;
   }
 }
 @media screen and (max-width: 370px) {

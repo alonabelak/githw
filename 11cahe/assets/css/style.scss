@@ -19,12 +19,10 @@ body {
     }
 }
 
-.maincontainer {
-    width: 100%;
-    height: 100%;
-    max-width: 1700px;
+.container {
+    max-width: 1170px;
+    width: 90%;
     margin: 0 auto;
-
 }
 
 #menu_shadow {
@@ -39,7 +37,6 @@ body {
     backdrop-filter: blur(10px);
     z-index: 100000;
     display: none;
-
 }
 
 #mobile_menu_block {
@@ -56,7 +53,6 @@ body {
     transition: all .2s ease;
     -webkit-box-shadow: 0 0 5px #000;
     box-shadow: 0 0 5px #000;
-
 }
 
 .open #menu_shadow {
@@ -108,12 +104,10 @@ body {
 }
 
 header {
-    max-width: 1700px;
     height: 150px;
     position: fixed;
     z-index: 999;
     width: 100%;
-    padding: 25px 50px;
     -webkit-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease;
@@ -129,6 +123,9 @@ header {
         -ms-flex-align: center;
         align-items: center;
         height: 100%;
+        max-width: 1170px;
+        width: 90%;
+        margin: 0 auto;
     }
 
     ul {
@@ -182,7 +179,6 @@ header {
         box-shadow: 0 0 3px #999;
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
-        margin-right: 0;
 
         .logo {
             font-size: 35px;
@@ -372,15 +368,19 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 .section_1 {
     background: url(../../img/img.png);
-    background-position: center;
+    background-position: bottom -100px center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0;
+
+    .container {
+        max-width: 1170px;
+        width: 90%;
+        margin: 0 auto;
+    }
 
     .info1 {
         max-width: 500px;
-        width: 90%;
-        padding: 23% 0 175px 7%;
+        padding: 250px 0;
 
         h2 {
             font-family: 'Raleway', sans-serif;
@@ -425,16 +425,24 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 .section_2 {
     background-color: #00b9b9;
-    background-image: url(../../img/imgraspberry.png);
-    background-position: left;
-    background-repeat: no-repeat;
-    margin: -80px 0 0;
-    padding: 190px 0;
+
+    .container {
+        max-width: 1170px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    img {
+        width: 50%;
+    }
 
     .info2 {
-        width: 32%;
-        height: 300px;
-        margin: 0 50%;
+        width: 50%;
+        align-self: center;
 
         h2 {
             font-family: 'Raleway Bold', sans-serif;
@@ -460,19 +468,21 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     background-image: url(../../img/imgtomatoes.png);
     background-position: 80%;
     background-repeat: no-repeat;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+
+    .container {
+        padding: 120px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 
     .buttons {
-        margin: 150px 0 150px 18%;
+        width: 50%;
 
         .button {
             width: 400px;
             height: 100px;
+
 
             .btn {
                 width: 75%;
@@ -517,6 +527,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     }
 
     h2 {
+        width: 50%;
         color: #fff;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -527,7 +538,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        margin: 0 auto;
         font-family: 'Raleway', sans-serif;
     }
 }
@@ -537,11 +547,13 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     margin-top: -10px;
     padding: 50px 0;
 
+
     .info_4 {
         text-align: center;
         margin: 0 auto;
         padding: 0 0 40px;
-        width: 590px;
+        max-width: 590px;
+        width: 90%;
 
         h2 {
             font-family: 'Raleway', sans-serif;
@@ -656,16 +668,17 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 }
 
 .section_5 {
-    background-image: url(../../img/section5.png);
-    background-size: cover;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    padding: 10% 0;
+    .container {
+        padding: 100px 0;
+        background-image: url(../../img/section5.png);
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
 
     .info5 {
         max-width: 720px;
         width: 90%;
-        padding: 0 10%;
 
         h2 {
             font-family: 'Raleway', sans-serif;
@@ -694,7 +707,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
         justify-content: space-between;
         max-width: 770px;
         width: 90%;
-        margin: 0 10%;
     }
 
     input {
@@ -765,8 +777,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     }
 
     .pictures_6 {
-        padding: 0 10%;
-
         .foodpictures {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -777,6 +787,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
             -webkit-box-align: start;
             -ms-flex-align: start;
             align-items: flex-start;
+            padding-bottom: 50px;
 
             >li {
                 width: calc((100% / 3) - (60px / 3));
@@ -789,7 +800,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
                         content: '';
                         display: block;
                         width: 100%;
-                        padding-top: 100%;
+                        padding-top: 83%;
                     }
 
                     .front {
@@ -815,7 +826,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
                         left: 0;
                         top: 0;
                         width: 100%;
-                        height: 83%;
+                        height: 100%;
                         background: -webkit-gradient(linear, left top, left bottom, from(rgba(254, 254, 254, 0)), to(rgb(0, 0, 0, 0.9)));
                         background: -o-linear-gradient(top, rgba(254, 254, 254, 0) 0%, rgb(0, 0, 0, 0.9) 100%);
                         background: linear-gradient(180deg, rgba(254, 254, 254, 0) 0%, rgb(0, 0, 0, 0.9) 100%);
@@ -946,9 +957,8 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
     .info_7 {
         text-align: center;
-        margin: 0 auto;
+        margin: 0 auto 40px;
         width: 370px;
-        height: 160px;
 
         h2 {
             font-family: 'Raleway', sans-serif;
@@ -965,13 +975,14 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
         }
     }
 
+
     .container_7 {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        padding: 75px 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
         .inputsinfo {
+            width: 50%;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -979,11 +990,11 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
             -webkit-box-direction: normal;
             -ms-flex-flow: column;
             flex-flow: column;
-            padding: 0 15%;
 
             input {
                 margin-bottom: 20px;
-                width: 500px;
+                max-width: 500px;
+                width: 90%;
                 height: 50px;
                 background-color: #00c4c473;
                 padding-left: 10px;
@@ -993,6 +1004,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
                 color: #fff;
                 outline: none;
                 border: none;
+                border-left: 5px solid transparent;
 
                 &::-webkit-input-placeholder {
                     color: #fff;
@@ -1023,7 +1035,8 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
             textarea {
                 max-height: 250px;
                 height: 250px;
-                width: 500px;
+                max-width: 500px;
+                width: 90%;
                 max-width: 500px;
                 background-color: #00c4c473;
                 padding: 12px;
@@ -1033,6 +1046,8 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
                 color: #fff;
                 outline: none;
                 border: none;
+                border-left: 5px solid transparent;
+
 
                 &::-webkit-input-placeholder {
                     color: #fff;
@@ -1059,9 +1074,45 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
                     border-left: 5px solid #355b82;
                 }
             }
+
+            button {
+                margin-top: 10px;
+                background-color: #00c4c4;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                max-width: 200px;
+                width: 90%;
+                height: 55px;
+                color: #fff;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 300;
+                font-size: 20px;
+                outline: none;
+                border: 2px solid #5585a2;
+                cursor: pointer;
+                text-transform: uppercase;
+                -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+                &:hover {
+                    border: 2px solid #00c4c4;
+                    background-color: #fff;
+                    color: #00c4c4;
+                }
+            }
+
         }
 
         .contacts {
+            padding-left: 100px;
+            width: 50%;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -1162,14 +1213,6 @@ footer {
             padding-left: 15px;
         }
     }
-
-    .section_7 {
-        .container_7 {
-            .inputsinfo {
-                padding: 0 50px;
-            }
-        }
-    }
 }
 
 @media screen and (max-width:1050px) {
@@ -1213,10 +1256,6 @@ footer {
             width: 100%;
             padding: 0 100px;
 
-            h2,
-            p {
-                color: #000;
-            }
         }
     }
 
@@ -1324,6 +1363,21 @@ footer {
                 img {
                     width: calc((100% / 2) - (20px / 2));
                 }
+            }
+        }
+    }
+
+    .section_3 {
+        .container {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .buttons {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
         }
     }
@@ -1495,9 +1549,7 @@ footer {
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
             flex-direction: column;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
+
 
             .contacts {
                 padding: 30px 10px;
@@ -1575,14 +1627,11 @@ footer {
     .section_7 {
         padding: 0 0 40px;
 
-        .container_7 {
-            padding: 0;
-        }
-
         .info_7 {
             h2 {
                 font-size: 50px;
-                padding: 20px 0;
+                width: 100%;
+
             }
         }
     }
@@ -1610,7 +1659,7 @@ footer {
     .section_7 {
         .container_7 {
             .inputsinfo {
-                padding: 0;
+                width: 100%;
             }
         }
     }
