@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alonabelak.github.io/sitemaps/sitemap.xml
