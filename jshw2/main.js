@@ -8,6 +8,8 @@ function checkPer(){
         alert("Adult");
     }else if (a>=60 && a<=120){
         alert("Old");
+    }else {
+        alert("Invalid data");
     }
 }
 function specialSymb(){
@@ -57,7 +59,7 @@ function threeDigit(){
         alert("There are repeated letters");
     }else {
         alert("There are no repeated letters");
-    }    
+    }
 }
 function leapYear(){
     let year = parseInt(prompt("Enter any year"));
@@ -78,8 +80,10 @@ function fiveDigit(){
         e = parseInt(arrT[4]);
     if (a == e && b == d) {
         alert("it's a palindrom");
-    }else {
+    }else if(a !==e && b !==d){
         alert("it's not a palindrom");
+    }else {
+        alert("Invalid data");
     }
 }
 function myConverter(){
@@ -98,6 +102,8 @@ function myConverter(){
         alert(ratioeur);
     }else if(cur == 3) {
         alert(ratioazn);
+    }else {
+        alert("Invalid data");
     }
 }
 function sumPurch(){
@@ -108,6 +114,8 @@ function sumPurch(){
         alert(parseInt(number + number*0.05));
     }else if(number >=500){
         alert(parseInt(number + number*0.07));
+    }else {
+        alert("Invalid data");
     }
 }
 function circleSquare(){
@@ -117,9 +125,11 @@ function circleSquare(){
         d = c/Math.PI;
     if(d <= s){
         alert("It can be in the square");
-    }else{
+    }else if(d >=s){
         alert("It can't be in the square");
-    }    
+    }else {
+        alert("Invalid data");
+    }   
 }
 function question(){
     let q1 = prompt("Choose the correct answer: I \r1.is \r2.am \r3.are \ra teacher. "),
@@ -148,6 +158,8 @@ function question(){
         }
         score = rez1 +rez2 + rez3;
         alert("Your score is " + score);
+    }else {
+        alert("Invalid data");
     }
 }
 
