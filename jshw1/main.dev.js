@@ -54,18 +54,19 @@ function priceChoc() {
       change = cash % price;
   alert("You can buy " + rez + " chocolates; Change will be " + change.toFixed(2));
 }
-/*function myCalc(){
-    let number = parseInt(prompt("Enter a three-digit number")),
-        number1 = number%10,
-        number2 = (number - number1)%100/10;
-        number3 = 
 
-
-    alert();    
-}*/
-
+function myCalc() {
+  var number = parseInt(prompt("Enter a three-digit number")),
+      s = parseInt(number / 100),
+      //2
+  d = parseInt(number % 100 / 10),
+      e = number % 10,
+      rez = e * 100 + d * 10 + s;
+  alert("Entered number is: " + number + " Swapped number is " + rez);
+}
 
 function myBank() {
+  debugger;
   var fee = parseFloat(prompt("Enter the amount of fee to the bank"));
   var months = 2,
       interest = 0.05;
