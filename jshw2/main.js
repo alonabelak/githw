@@ -194,7 +194,7 @@ switch(m){
         }
         break;
     case 2:
-        if (leapYear(y) && nd > 29) {
+        if (leapYear(y) && nd >= 29) {
             nd = 1;
             nm++;
         }else if (nd > 28) {
