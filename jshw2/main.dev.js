@@ -66,11 +66,13 @@ function specialSymb() {
 }
 
 function threeDigit() {
-  var number = parseInt(prompt("Enter three-digit number"));
-  var arrT = number.split(""),
-      f = parseInt(arrT[0]),
-      s = parseInt(arrT[1]),
-      t = parseInt(arrT[2]);
+  var number = parseInt(prompt("Enter three-digit number")),
+      f = parseInt(number % 10),
+      s = parseInt(number % 100 / 10),
+      t = parseInt(number / 100);
+  console.log(f);
+  console.log(s);
+  console.log(t);
 
   if (f == s || s == t || t == f) {
     alert("There are repeated letters");
@@ -92,16 +94,12 @@ function leapYear() {
 function fiveDigit() {
   debugger;
   var number = parseInt(prompt("Enter any five digit number"));
-  var arrT = number.split(""),
-      a = parseInt(arrT[0]),
-      b = parseInt(arrT[1]),
-      c = parseInt(arrT[2]),
-      d = parseInt(arrT[3]),
-      e = parseInt(arrT[4]);
+  var arrT = number.split("");
+  console.log(arrT);
 
-  if (a == e && b == d) {
+  if (numb_arr[0] == numb_arr[4] && numb_arr[1] == numb_arr[3]) {
     alert("it's a palindrom");
-  } else if (a !== e && b !== d) {
+  } else if (numb_arr[0] !== numb_arr[4] && numb_arr[1] !== numb_arr[3]) {
     alert("it's not a palindrom");
   } else {
     alert("Invalid data");

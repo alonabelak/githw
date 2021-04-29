@@ -50,11 +50,13 @@ function specialSymb(){
     alert(symbol);         
 }
 function threeDigit(){
-    let number = parseInt(prompt("Enter three-digit number"));
-    let arrT = number.split(""),
-        f = parseInt(arrT[0]),
-        s = parseInt(arrT[1]),
-        t = parseInt(arrT[2]);
+    let number = parseInt(prompt("Enter three-digit number")),
+        f = parseInt(number%10),  
+        s = parseInt((number%100)/10), 
+        t = parseInt(number/100); 
+    console.log(f);
+    console.log(s);
+    console.log(t);
     if(f == s || s == t || t == f){
         alert("There are repeated letters");
     }else {
@@ -69,39 +71,42 @@ function leapYear(){
         alert("This year isn't a leap year");
     }
 }
+
 function fiveDigit(){
     debugger;
-    let number = parseInt(prompt("Enter any five digit number"));
-    let arrT = number.split(""),
-        a = parseInt(arrT[0]),
-        b = parseInt(arrT[1]),
-        c = parseInt(arrT[2]),
-        d = parseInt(arrT[3]),
-        e = parseInt(arrT[4]);
-    if (a == e && b == d) {
-        alert("it's a palindrom");
-    }else if(a !==e && b !==d){
-        alert("it's not a palindrom");
-    }else {
-        alert("Invalid data");
-    }
+    let number = parseInt(prompt("Enter five-digit number")),
+    s = parseInt(number/10000), 
+    d = parseInt((number%10000)/1000),
+    e = parseInt((number%1000)/100),
+    f = parseInt((number%100)/10),
+    i = number%10,
+    rvrs = i * 10000 + f * 1000 + e * 100 + d * 10 + s;
+  if (isNaN(number)) {
+    alert("Enter valid number");
+  } else if (number == rvrs) {
+    alert("Number is palindrome");
+  } else {
+    alert("Number isn't palindrome");
+  }
 }
 function myConverter(){
-    debugger;
+    const uah = 27.90,
+        eur = 0.83,
+        azn = 0.59;
     let usd = parseFloat(prompt("Enter amount of USD")),
         cur = parseInt(prompt("Enter the number of the currency: 1 - uah, 2 - eur, 3 - azn")),
-        ratiouah = usd*27.90,
-        uah = 1,
-        ratioeur = usd*0.83,
-        eur = 2,
-        ratioazn = usd*0.59;
-        azn = 3;
+        uah1 = 1,
+        eur2 = 2,
+        azn3 = 3,
+        ratiouah = usd*uah,
+        ratioeur = usd*eur,
+        ratioazn = usd*azn;
     if (cur == 1){
-        alert(ratiouah);
+        alert(parseInt(ratiouah));
     }else if(cur == 2) {
-        alert(ratioeur);
+        alert(parseInt(ratioeur));
     }else if(cur == 3) {
-        alert(ratioazn);
+        alert(parseInt(ratioazn));
     }else {
         alert("Invalid data");
     }
@@ -161,5 +166,67 @@ function question(){
     }else {
         alert("Invalid data");
     }
+}
+function date() {
+    const date = prompt('Enter the date as in the example: 31/12/2020'),
+    arDate = date.split("/"),
+    d = parseInt(arDate[0]),
+    m = parseInt(arDate[1]),
+    y = parseInt(arDate[2]),
+    leapYear = (y) =>
+    y % 400 === 0 || (y % 4 === 0 && y % 100 !== 0) ? true : false;
+    let nd = nm = ny = 0;
+    nd = d +1;
+    nm = m;
+    ny = y;
+    let monthDays = 0;
+switch(m){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        if(nd>31){
+            nd = 1;
+            nm++;
+        }
+        break;
+    case 2:
+        if (leapYear(y) && nd > 29) {
+            nd = 1;
+            nm++;
+        }else if (nd > 28) {
+            nd = 1;
+            nm++;
+        }
+        break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        if(nd>30){
+            nd = 1;
+            nm++;
+        }
+        break;
+    default:
+        console.log("Invalid month number: "+ nm);
+        break;
+}
+if(nm>12){
+    nm = 1;
+    ny++;
+}
+nd = addZero(nd);
+nm = addZero(nm);
+alert(`${nd}/${nm}/${ny}`)
+}
+function addZero(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
 }
 
