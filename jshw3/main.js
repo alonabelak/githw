@@ -199,23 +199,23 @@ function guessNumber (){
             n = parseInt((finish - start)/2);
             question = parseInt(prompt("Choose correct variant \r1. Your number equals  " +n +"\r2. Your number is lower than  "+n+ "\r3. Your number is bigger than  " +n));
             rez=false;
-            //if (question==3){
-                //start=n;
-                //n=parseInt((finish - start)/2+ start);
-               // question = parseInt(prompt("Choose correct variant \r1. Your number equals  " +n +"\r2. Your number is lower than  "+n+ "\r3. Your number is bigger than  " +n));
-                //rez=false;
-           // }
+            if (question==3){
+                start=n;
+                n=parseInt((finish - start)/2+ start);
+                question = parseInt(prompt("Choose correct variant \r1. Your number equals  " +n +"\r2. Your number is lower than  "+n+ "\r3. Your number is bigger than  " +n));
+                rez=false;
+            }
         }else if(question==3){   
             start=n;
             n=parseInt((finish - start)/2 + start);
             question = parseInt(prompt("Choose correct variant \r1. Your number equals  " +n +"\r2. Your number is lower than  "+n+ "\r3. Your number is bigger than  " +n));
             rez=false;
-            //if (question==2){
-                //start=n;
-                //n=parseInt((finish - start)/2);
-               // question = parseInt(prompt("Choose correct variant \r1. Your number equals  " +n +"\r2. Your number is lower than  "+n+ "\r3. Your number is bigger than  " +n));
-                //rez=false;
-           // }
+            if (question==2){
+                start=n;
+                n=parseInt((finish - start)/2);
+                question = parseInt(prompt("Choose correct variant \r1. Your number equals  " +n +"\r2. Your number is lower than  "+n+ "\r3. Your number is bigger than  " +n));
+                rez=false;
+            }
         } else  if(question==1){
             alert("This is your number");
             rez=true;
