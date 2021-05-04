@@ -2,8 +2,8 @@ function number(){
     const s = parseInt(document.getElementById("first_number").value),
     a = parseInt(document.getElementById("second_number").value);
     let sum = 0;
-    for( i=s; i<=a; i++){
-         sum += i;
+    for(i=s; i<=a; i++){
+        sum += i;
     }
     document.getElementById("number_rez").innerText = sum;
 }
@@ -32,7 +32,6 @@ function divide(){
     document.getElementById("divide_rez").innerText = rez;     
 }
 function quant (){
-    
     let a = parseInt(document.getElementById("quant_number").value);
     let rez = '',
     i = '';
@@ -79,7 +78,6 @@ function tenNumbers (){
     }        
 }
 function tasks(){
-    debugger;
     let d = true;
    
     do {
@@ -102,7 +100,7 @@ function tasks(){
         } else {
             alert("Enter corect numbers");
         }
-        question = confirm("Хотите решить еще один пример?");
+        question = confirm("Do you want more actions?");
             if(question===true){
                 d=true;
             } else if(question ===false){
@@ -111,14 +109,11 @@ function tasks(){
     }while(d);
 }
 function moveNumber(){
-    debugger;
     let n = parseInt(document.getElementById("move1_number").value);
     let shift = parseInt(document.getElementById("move2_number").value);
-        
-
+    
 }
 function days (){
-    debugger;
     let d = new Date,
     rez = d.getDay();
     switch(rez){
@@ -146,7 +141,7 @@ function days (){
         }
     alert("Today: "+ day);
     let question = confirm("Do you want to see next day?");
-        while( question===true){
+        while(question===true){
             rez = rez + 1;
             let day="";
             if(rez>=0 && rez<=7){
@@ -195,7 +190,7 @@ function guessNumber (){
     let rez = true,
     start = 0,
     finish = 100;
-    alert("Guess a number from 1 to 100");
+    alert("Think of a number from 1 to 100");
     let  n = (finish - start)/2;
     let question = parseInt(prompt("Choose correct variant \r1. Your number equals  " +n +"\r2. Your number is lower than  "+n+ "\r3. Your number is bigger than  " +n));
     do{

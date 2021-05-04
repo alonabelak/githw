@@ -99,7 +99,6 @@ function tenNumbers() {
 }
 
 function tasks() {
-  debugger;
   var d = true;
 
   do {
@@ -123,7 +122,7 @@ function tasks() {
       alert("Enter corect numbers");
     }
 
-    question = confirm("Хотите решить еще один пример?");
+    question = confirm("Do you want more actions?");
 
     if (question === true) {
       d = true;
@@ -134,13 +133,11 @@ function tasks() {
 }
 
 function moveNumber() {
-  debugger;
   var n = parseInt(document.getElementById("move1_number").value);
   var shift = parseInt(document.getElementById("move2_number").value);
 }
 
 function days() {
-  debugger;
   var d = new Date(),
       rez = d.getDay();
 
@@ -235,7 +232,7 @@ function guessNumber() {
   var rez = true,
       start = 0,
       finish = 100;
-  alert("Guess a number from 1 to 100");
+  alert("Think of a number from 1 to 100");
   var n = (finish - start) / 2;
   var question = parseInt(prompt("Choose correct variant \r1. Your number equals  " + n + "\r2. Your number is lower than  " + n + "\r3. Your number is bigger than  " + n));
 
