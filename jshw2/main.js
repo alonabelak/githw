@@ -141,23 +141,20 @@ function question(){
     q2 = prompt("Choose the correct answer: I \r1.was \r2.were \r3.will \rteacher a year ago. "),
     q3 = prompt("Choose the correct answer: I \r1.don't finish \r2.didn't finish \r3.haven't finished \rmy hw yet");
 
-    if(!isNaN(q1) && !isNaN(q2) && !isNaN(q2)){
-        let rez1 = 0,
-        rez2 = 0,
-        rez3 = 0,
-        score = 0;
+    if(!isNaN(q1) && !isNaN(q2) && !isNaN(q3)){
+        let score = 0;
         if(q1 == 2){
-            rez1 = 2;
+            rez1 = score + 2;
         } else{
-                rez1 = 0;
+            rez1 = 0;
         }
         if(q2 == 1){
-            rez2 = 2;
+            rez2 = score + 2;
         }else{
             rez2 = 0;
         }
         if(q3 == 3){
-        rez3 = 2;
+        rez3 = score + 2;
         } else{
             rez3 = 0;
         }
@@ -169,7 +166,7 @@ function question(){
 }
 function date() {
     const date = prompt('Enter the date as in the example: 31/12/2020'),
-    arDate = date.split("/"),
+    arDate = date.split('/'),
     d = parseInt(arDate[0]),
     m = parseInt(arDate[1]),
     y = parseInt(arDate[2]),
