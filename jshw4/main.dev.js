@@ -6,7 +6,7 @@ function compare() {
   var rez = document.getElementById("compare_rez").innerHTML = comparison(a, b);
 }
 
-function comaprison(a, b) {
+function comparison(a, b) {
   //debugger;    
   if (a < b) {
     return -1;
