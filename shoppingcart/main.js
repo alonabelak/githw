@@ -151,8 +151,6 @@ function addToCart() {
         errMsg.push("Enter product qty.");
     }
 
-
-
     if (valid) {  
         cartAction.add(
             {

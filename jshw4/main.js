@@ -120,7 +120,7 @@ function timeConverter(a=0, b=0, c=0){
     return rez;
 }
 function timeConvert(){
-    debugger;
+   //debugger;
     let hour =parseInt(document.getElementById("hour").value);
     let minute =parseInt(document.getElementById("minute").value);
     let second =parseInt(document.getElementById("second").value);
