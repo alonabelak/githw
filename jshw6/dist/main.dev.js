@@ -44,7 +44,7 @@ var arrAudit = [{
   faculty: "Faculty of Physical Trainings"
 }];
 
-function auditInfo1(arr) {
+function auditInfoShow(arr) {
   var rez = "<ul>";
 
   for (var _i = 0; _i < arr.length; _i++) {
@@ -56,6 +56,6 @@ function auditInfo1(arr) {
 }
 
 function auditInfo() {
-  var rez = auditInfo1(arrAudit);
+  var rez = auditInfoShow(arrAudit);
   document.getElementById("audit_rez").innerHTML = rez;
 }

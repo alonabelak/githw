@@ -51,7 +51,7 @@ let arrAudit = [
     },
 ]
 
-function auditInfo1 (arr){
+function auditInfoShow(arr){
     let rez = "<ul>";
     for (let i = 0; i < arr.length; i++) {
         rez += `<li> Name of auditorium: ${arr[i].name};<br>Number of places: ${arr[i].number};<br>Faculty: ${arr[i].faculty};  </li>`;
@@ -60,7 +60,7 @@ function auditInfo1 (arr){
     rez += "</ul>"
     return rez;
 }
-function auditInfo (){
-    let rez = auditInfo1 (arrAudit);
+function auditInfo(){
+    let rez = auditInfoShow(arrAudit);
     document.getElementById("audit_rez").innerHTML = rez;
 }
