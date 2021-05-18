@@ -10,12 +10,16 @@
 <body>
     <div class="container">
         <div class="row mt-4">
+            <p>1. Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), и следующие функции для работы с этим объектом:
+
+               <p> Функция для вывода на экран информации об автомобиле;</p></p>
             <div class="col-2">
                 <button type="button" class="btn btn-success" onclick="auto.vehicleInfo()">Vehicle information</button>
             </div>
             <div class="col-6" id="vehicle_rez"></div>
         </div>
         <div class="row mt-4">
+            <p>Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.</p>
             <div class="col-2">
                 <input type="number" id="car_distance" class="form-control" placeholder="Enter distance">
             </div>
@@ -25,12 +29,21 @@
             <div class="col-6" id="time_rez"></div>
         </div>
         <div class="row mt-4">
+            <p>2. Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом: 
+            <p>Функция сложения 2-х объектов-дробей;</p>            
+            <p>Функция вычитания 2-х объектов-дробей;</p>                
+            <p>Функция умножения 2-х объектов-дробей;</p>              
+            <p>Функция деления 2-х объектов-дробей;</p>               
+            <p>  Функция сокращения объекта-дроби.</p>
+            </p>
             <div class="col-2">
                 <button type="button" class="btn btn-success" onclick="fraction.fractionRez()">Fractions</button>
             </div>
             <div class="col-6" id="fraction_rez"></div>
         </div>
         <div class="row mt-4">
+            <p>3. Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом:</p>
+            <p>Функция вывода времени на экран;</p>
             <div class="col-2">
                 <input type="text" id="current_time" class="form-control" placeholder="Enter time">
             </div>
@@ -40,6 +53,10 @@
             <div class="col-6" id="current_time_rez"></div>
         </div>
         <div class="row mt-4">
+            <p>Функция изменения времени на переданное количество секунд;</p>
+            <p>Функция изменения времени на переданное количество минут;</p>
+            <p>Функция изменения времени на переданное количество часов. </p>
+            <p>Учтите, что в последних 3-х функциях, при изменении одной части времени, может измениться и другая. Например, если ко времени «20:30:45» добавить 30 секунд, то должно получиться «20:31:15», а не «20:30:75».</p>
             <div class="col-2">
                 <input type="text" id="time_change" class="form-control" placeholder="Enter another time">
             </div>

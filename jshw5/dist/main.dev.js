@@ -54,7 +54,7 @@ var fraction = {
       rez.d = this.fr1.d * this.fr2.d;
     }
 
-    return this.reduce(rez);
+    return this.reduction(rez);
   },
   substraction: function substraction() {
     var rez = {
@@ -70,7 +70,7 @@ var fraction = {
       rez.d = this.fr1.d * this.fr2.d;
     }
 
-    return this.reduce(rez);
+    return this.reduction(rez);
   },
   multiplication: function multiplication() {
     var rez = {
@@ -79,7 +79,7 @@ var fraction = {
     };
     rez.n = this.fr1.n * this.fr2.n;
     rez.d = this.fr1.d * this.fr2.d;
-    return this.reduce(rez);
+    return this.reduction(rez);
   },
   division: function division() {
     var rez = {
@@ -88,9 +88,9 @@ var fraction = {
     };
     rez.n = this.fr1.n * this.fr2.d;
     rez.d = this.fr1.d * this.fr2.n;
-    return this.reduce(rez);
+    return this.reduction(rez);
   },
-  reduce: function reduce(obj) {
+  reduction: function reduction(obj) {
     var number = function number(a, b) {
       var rez_number = 0;
 
@@ -150,7 +150,7 @@ var time = {
     var s = parseInt(arrt[2]);
 
     if (h >= 0 && m >= 0 && s >= 0) {
-      rez_s = timeConverter(h, m, s);
+      rez_s = timeConverter(h, m, s); //function from prev hw
     } else {
       alert("Enter correct time");
     }
@@ -158,14 +158,14 @@ var time = {
     return rez_s;
   },
   changeTime: function changeTime() {
-    debugger;
     var a = document.getElementById("current_time").value;
     var num1 = time.validTime(a);
     var b = document.getElementById("time_change").value;
     var num2 = time.validTime(b);
     var sum_s = num1 + num2;
-    var change_t = getTime(sum_s);
-    var changeArr = change_t.split(":");
+    var change_time = getTime(sum_s); //function of seconds from prev hw
+
+    var changeArr = change_time.split(":");
     var h = parseInt(changeArr[0]);
     var m = parseInt(changeArr[1]);
     var s = parseInt(changeArr[2]);

@@ -48,7 +48,7 @@ let fraction = {
             rez.n = (this.fr1.n * this.fr2.d + this.fr1.d * this.fr2.n);
             rez.d = (this.fr1.d * this.fr2.d);
         }
-        return this.reduce(rez);
+        return this.reduction(rez);
     },
     substraction(){
         let rez = {
@@ -62,7 +62,7 @@ let fraction = {
             rez.n = (this.fr1.n * this.fr2.d - this.fr1.d * this.fr2.n);
             rez.d = (this.fr1.d * this.fr2.d);
         }
-        return this.reduce(rez);
+        return this.reduction(rez);
     },
     multiplication(){
         let rez = {
@@ -71,7 +71,7 @@ let fraction = {
         }
         rez.n = this.fr1.n * this.fr2.n;
         rez.d = this.fr1.d * this.fr2.d;
-        return this.reduce(rez);
+        return this.reduction(rez);
     },
     division(){
         let rez = {
@@ -80,15 +80,15 @@ let fraction = {
         }
         rez.n = this.fr1.n * this.fr2.d;
         rez.d = this.fr1.d * this.fr2.n;
-        return this.reduce(rez); 
+        return this.reduction(rez); 
     },
-    reduce(obj) {
+    reduction(obj) {
         let number = function number(a, b) {
             let rez_number = 0;
             while (a != 0 && b != 0) {
                 if (a > b) {
                     a = a % b;
-                } else {
+                }else {
                     b = b % a;
                 }
                 rez_number = (a + b);
@@ -132,7 +132,6 @@ let time = {
         let h = parseInt(tArr[0]);
         let m = parseInt(tArr[1]);
         let s = parseInt(tArr[2]);
-
         time.set(["h"], h);
         time.set(["m"], m);
         time.set(["s"], s);
@@ -145,25 +144,23 @@ let time = {
         let m = parseInt(arrt[1]);
         let s = parseInt(arrt[2]);
         if (h >= 0 && m >= 0 && s >= 0) {
-            rez_s = timeConverter(h, m, s);  
+            rez_s = timeConverter(h, m, s); //function from prev hw
         } else {
             alert("Enter correct time");
         }
         return rez_s;
     },
     changeTime() {
-        debugger;
         let a = document.getElementById("current_time").value;
         let num1 = time.validTime(a);
         let b = document.getElementById("time_change").value;
         let num2 = time.validTime(b);
         let sum_s = num1 + num2;
-        let change_t = getTime(sum_s);   
-        let changeArr = change_t.split(":");
+        let change_time = getTime(sum_s);   //function of seconds from prev hw
+        let changeArr = change_time.split(":");
         let h = parseInt(changeArr[0]);
         let m = parseInt(changeArr[1]);
         let s = parseInt(changeArr[2]);
-
         time.set(["h"], h);
         time.set(["m"], m);
         time.set(["s"], s);
@@ -177,7 +174,7 @@ function addZero(n) {
 //functions from previous hw
 function timeConverter(a=0, b=0, c=0){
     let rez=0;
-    if  (a>0){
+    if (a>0){
         a = (a*60*60);
     }
      if (b>0){
