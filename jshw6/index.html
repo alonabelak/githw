@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <p>3.Создать массив CSS-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. Написать функцию, которая принимает массив стилей и текст, и выводит этот текст с помощью document.write() в тегах, добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве.</p>
+            <div class="col-2">
+                <input type="text" id="style_text" class="form-control mb-3" placeholder="Enter any text">
+                <button type="button" class="btn btn-success" onclick="styleInfo()">Style information</button>
+            </div>
+            <div class="col-6" id="style_rez"></div>
+        </div>
+        <div class="row mt-4">
+            <p>4. Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и названия факультета, для которого она предназначена. Написать несколько функций для работы с ним</p>
+            <p>Вывод на экран всех аудиторий</p>
+            <div class="col-2">
+                <button type="button" class="btn btn-success" onclick="auditInfo()">Auditorium information</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <p>Вывод на экран аудиторий для указанного факультета;</p>
+            <div class="col-4">
+            <input type="text" id="auditorium" class="form-control mt-3" placeholder="Enter the name of faculty"></div>
+        </div>
+        <div class="col-6" id="audit_rez"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
