@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="dist/css/lightslider.min.css">  
+    <style>
+
+    </style>   
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="cross">
+                <p>our featured work
+                    <img src="img/Rectangle 6 copy 2.png" alt="">
+                </p>
+            </div>
+            <div class="triangle">
+                <img src="img/Rectangle 7 copy.png" alt="">
+                <h2>We create engaging experiences through creativity & craft</h2>
+        </div>
+        </div> 
+    </div>
+    <footer>
+        <div id="slider">
+            
+            <div><div class="slider_item"><img src="img/Rectangle 8.jpg" alt=""></div></div>
+            <div><div class="slider_item"><img src="img/Layer 7.jpg" alt=""></div></div>
+            <div><div class="slider_item"><img src="img/Layer 8.jpg" alt=""></div></div>
+            <div><div class="slider_item"><img src="img/Layer 9.jpg" alt=""></div></div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="dist/js/lightslider.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('#slider').lightSlider({
+            item:4,
+            loop:true,
+            slideMove:2,
+            autoWidth: false,
+            easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+            speed:600,
+            enableDrag:true,
+            pager:false,
+            controls: true,
+            prevHtml: '<span class="custom-prev-html"><img src="img/layer 10 copy.png"></span>',
+            nextHtml:  '<span class="custom-prev-html" style="position: relative; right: 60px"><img src="img/right.png"></span>',
+            thumbMargin: 5,
+            responsive : [
+                {
+                    breakpoint:1200,
+                    settings: {
+                        item:3,
+                        slideMove:1,
+                        slideMargin:2,
+                    }
+                },
+                {
+                    breakpoint:700,
+                    settings: {
+                        item:2,
+                        slideMove:1,
+                        slideMargin:6,
+                    }
+                },
+                {
+                    breakpoint:500,
+                    settings: {
+                        item:2,
+                        slideMove:1
+                    }
+                },
+                {
+                    breakpoint:380,
+                    settings: {
+                        item:1,
+                        slideMove:1
+                    }
+                }      
+            ]
+        });  
+    });
+    </script>
+</body>
+</html>
