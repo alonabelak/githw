@@ -82,7 +82,7 @@ function auditGroupInfo() {
   document.getElementById("group_rez").innerHTML = rez;
 }
 
-function sortAudit() {
+var sortAudit = function sortAudit() {
   var sort = arrAudit.sort(function (a, b) {
     if (a.number > b.number) {
       return 1;
@@ -94,9 +94,9 @@ function sortAudit() {
   });
   var rez = auditInfoShow(sort);
   document.getElementById("sort_rez").innerHTML = rez;
-}
+};
 
-function nameSortAudit() {
+var nameSortAudit = function nameSortAudit() {
   var sort = arrAudit.sort(function (a, b) {
     if (a.name > b.name) {
       return 1;
@@ -108,4 +108,4 @@ function nameSortAudit() {
   });
   var rez = auditInfoShow(sort);
   document.getElementById("namesort_rez").innerHTML = rez;
-}
+};

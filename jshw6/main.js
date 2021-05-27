@@ -86,7 +86,7 @@ function auditGroupInfo() {
     document.getElementById("group_rez").innerHTML = rez;
 }
 
-function sortAudit() {
+let sortAudit = function () {
     let sort = arrAudit.sort (function(a,b){
         if (a.number > b.number) {
             return 1;
@@ -100,7 +100,7 @@ function sortAudit() {
     document.getElementById("sort_rez").innerHTML = rez;
 }
 
-function nameSortAudit (){
+let nameSortAudit = function(){
     let sort = arrAudit.sort (function(a,b){
         if (a.name > b.name) {
             return 1;
