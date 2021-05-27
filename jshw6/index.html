@@ -29,6 +29,33 @@
             <p>Вывод на экран аудиторий для указанного факультета;</p>
             <div class="col-4">
             <input type="text" id="auditorium" class="form-control mt-3" placeholder="Enter the name of faculty"></div>
+            <div class="col-2">
+                <button type="button" class="btn btn-success" onclick="facultyInfo()">Auditorium for this faculty</button>
+            </div>
+            <div class="col-6" id="faculty_rez"></div>
+        </div>
+        <div class="row mt-4">
+            <p>Вывод на экран только тех аудиторий, которые подходят для переданной группы. Объект-группа состоит из названия, количества студентов и названия факультета;</p>
+            <div class="col-4">
+            <input type="text" id="auditgroup" class="form-control mt-3" placeholder="Enter the info about faculty"></div>
+            <div class="col-2">
+                <button type="button" class="btn btn-success" onclick="auditGroupInfo()">Auditorium for this info about faculties</button>
+            </div>
+            <div class="col-6" id="group_rez"></div>
+        </div>
+        <div class="row mt-4">
+            <p>Функция сортировки аудиторий по количеству мест;</p>
+            <div class="col-4">
+                <button type="button" class="btn btn-success" onclick="sortAudit()">Sort by places</button>
+            </div>
+            <div class="col-6" id="sort_rez"></div>
+        </div>
+        <div class="row mt-4 mb-4">
+            <p>Функция сортировки аудиторий по названию (по алфавиту).</p>
+            <div class="col-4">
+                <button type="button" class="btn btn-success" onclick="nameSortAudit()">Sort by names</button>
+            </div>
+            <div class="col-6" id="namesort_rez"></div>
         </div>
         
     </div>

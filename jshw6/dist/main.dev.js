@@ -59,3 +59,53 @@ function auditInfo() {
   var rez = auditInfoShow(arrAudit);
   document.getElementById("audit_rez").innerHTML = rez;
 }
+
+function facultyInfo() {
+  var info = document.getElementById("auditorium").value;
+  var rez_info = arrAudit.findIndex(function (el) {
+    if (el.faculty == info) {
+      return el;
+    }
+  });
+  var rez = arrAudit[rez_info].name;
+  document.getElementById("faculty_rez").innerHTML = rez;
+}
+
+function auditGroupInfo() {
+  var group = document.getElementById("auditgroup").value;
+  var rez_info = arrAudit.findIndex(function (el) {
+    if (el.faculty == group || el.number == group || el.faculty == group) {
+      return el;
+    }
+  });
+  var rez = "".concat(arrAudit[rez_info].name, "; ").concat(arrAudit[rez_info].number, "; ").concat(arrAudit[rez_info].faculty, "; ");
+  document.getElementById("group_rez").innerHTML = rez;
+}
+
+function sortAudit() {
+  var sort = arrAudit.sort(function (a, b) {
+    if (a.number > b.number) {
+      return 1;
+    } else if (a.number < b.number) {
+      return -1;
+    } else if (a.number == b.number) {
+      return 0;
+    }
+  });
+  var rez = auditInfoShow(sort);
+  document.getElementById("sort_rez").innerHTML = rez;
+}
+
+function nameSortAudit() {
+  var sort = arrAudit.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    } else if (a.name < b.name) {
+      return -1;
+    } else if (a.name == b.name) {
+      return 0;
+    }
+  });
+  var rez = auditInfoShow(sort);
+  document.getElementById("namesort_rez").innerHTML = rez;
+}

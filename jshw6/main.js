@@ -55,7 +55,6 @@ function auditInfoShow(arr){
     let rez = "<ul>";
     for (let i = 0; i < arr.length; i++) {
         rez += `<li> Name of auditorium: ${arr[i].name};<br>Number of places: ${arr[i].number};<br>Faculty: ${arr[i].faculty};  </li>`;
-
     }
     rez += "</ul>"
     return rez;
@@ -63,4 +62,54 @@ function auditInfoShow(arr){
 function auditInfo(){
     let rez = auditInfoShow(arrAudit);
     document.getElementById("audit_rez").innerHTML = rez;
+}
+
+function facultyInfo (){
+    let info = document.getElementById("auditorium").value;
+    let rez_info = arrAudit.findIndex(function (el){
+        if(el.faculty == info) {
+            return el;
+        }
+    });
+    let rez = arrAudit[rez_info].name;
+    document.getElementById("faculty_rez").innerHTML = rez;
+}
+
+function auditGroupInfo() {
+    let group = document.getElementById("auditgroup").value;
+    let rez_info = arrAudit.findIndex(function (el){
+        if(el.faculty == group || el.number == group || el.faculty == group) {
+            return el;
+        }
+    });
+    let rez = `${arrAudit[rez_info].name}; ${arrAudit[rez_info].number}; ${arrAudit[rez_info].faculty}; `;
+    document.getElementById("group_rez").innerHTML = rez;
+}
+
+function sortAudit() {
+    let sort = arrAudit.sort (function(a,b){
+        if (a.number > b.number) {
+            return 1;
+        } else if (a.number < b.number) {
+            return -1;
+        } else if (a.number == b.number) {
+            return 0;
+        }
+    });
+    let rez = auditInfoShow(sort);
+    document.getElementById("sort_rez").innerHTML = rez;
+}
+
+function nameSortAudit (){
+    let sort = arrAudit.sort (function(a,b){
+        if (a.name > b.name) {
+            return 1;
+        } else if (a.name < b.name) {
+            return -1;
+        } else if (a.name == b.name) {
+            return 0;
+        }
+    });
+    let rez = auditInfoShow(sort);
+    document.getElementById("namesort_rez").innerHTML = rez;
 }
