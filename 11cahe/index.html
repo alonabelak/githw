@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="assets/css/hamburger.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;700;900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -57,7 +58,7 @@
         <main>
             <div class="section_1" id="section_1">
                 <div class="container">
-                    <div class="info1">
+                    <div class="info1 wow animate__slideInLeft" data-wow-duration="2s">
                         <h2>Fresh Life</h2>
                         <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                         <form><button type="submit">Get free now</button></form>
@@ -67,7 +68,7 @@
             <div class="section_2" id="section_2">
                 <div class="container">    
                     <img src="img/imgraspberry.png" alt="">          
-                    <div class="info2">
+                    <div class="info2 wow animate__slideInRight" data-wow-duration="2s">
                         <h2>About Us</h2>
                         <p class="paragraph1">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
                         <p class="paragraph2">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
@@ -76,19 +77,14 @@
             </div>
             <div class="section_3" id="section_3">
                 <div class="container">
-                    <div class="buttons">
+                    <div class="buttons wow animate__slideInUp" data-wow-duration="2s" data-wow-offset="200">
                     <div class="button"> 
-                        
                         <button type="button" class="btn">Online Shopping</button>
-                            <button  class="small"><img src="fonts/Untitled-2.png" alt=""></button>
-                        
+                            <button class="small"><img src="fonts/Untitled-2.png" alt=""></button>
                         </div>
-                        
                         <div class="button"> 
-                      
                             <button class="btn">Quality Product</button>
                             <button class="small"> <img src="fonts/Untitled-3.png" alt=""></button>
-                   
                         </div>
                         <div class="button"> 
                             <button class="btn">Domestic &#38; International Delivery</button>
@@ -103,7 +99,7 @@
                 </div>
             </div>
             <div class="section_4" id="section_4">
-                <div class="container">
+                <div class="container wow animate__slideInLeft" data-wow-duration="2s" data-wow-offset="400">
                     <div class="info_4">
                         <h2>Gallery</h2>
                         <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -125,7 +121,7 @@
                 </div>
             </div>
             <div class="section_5" id="section_5">
-                <div class="container">
+                <div class="container wow animate__slideInRight" data-wow-duration="2s" data-wow-offset="400">
                     <div class="info5">
                         <h2>Subscribe To Us</h2>
                         <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -137,7 +133,7 @@
                 </div>
             </div>
             <div class="section_6" id="section_6">
-                <div class="container">
+                <div class="container wow animate__slideInUp" data-wow-duration="2s" data-wow-offset="200">
                     <div class="info_6">
                         <h2>Blog</h2>
                         <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
@@ -190,7 +186,7 @@
                 </div>
             </div>
             <div class="section_7" id="section_7">
-                <div class="container">
+                <div class="container wow animate__slideInLeft" data-wow-duration="2s" data-wow-offset="200">
                     <div class="info_7">
                         <h2>Contact</h2>
                         <p>For new projects, ideas, business or anything
@@ -228,8 +224,19 @@
         </footer>
 
     </div>
-
-
+    <script src="assets/js/wow.js"></script>
+    <script>
+        wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+    </script>       
     <script src="plugins/js/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
