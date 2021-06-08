@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'GothamMedium';
+	src: url('../../fonts/gotham-medium-webfont.woff2') format('woff2');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_10146">Text with this font applied</p> */
+.fontsforweb_fontid_10146 {
+	font-family: 'GothamMedium';
+}
