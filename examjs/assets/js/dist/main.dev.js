@@ -49,9 +49,43 @@ function sendMessage(e) {
   var text = 'User ' + name + ' is signed! Email is ' + email;
 
   if (isValidEmail(email)) {
-    alert("You are signed in! Thank you");
+    topPanel.success("You are signed in", true);
     $.get('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage?chat_id=' + CHAT_ID + '&text=' + text);
   } else {
-    alert("Enter valid email");
+    topPanel.danger("Enter correct email", true);
   }
 }
+
+var topPanel = {
+  success: function success() {
+    var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Some text here";
+    var autoclose = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    this.showPanel(text, "success", autoclose);
+  },
+  danger: function danger() {
+    var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Some text here";
+    var autoclose = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    this.showPanel(text, "danger", autoclose);
+  },
+  showPanel: function showPanel(text, type, autoclose) {
+    var btn = autoclose ? "" : '<button onclick="topPanel.closePanel()>&times;</button>';
+    var h = "<div id=\"top_panel\" class=\"panel_".concat(type, "\">\n        <p>").concat(text, "</p>").concat(btn, "<div></div>");
+
+    if (document.getElementById("top_panel") !== null) {
+      this.closePanel();
+    }
+
+    document.getElementsByTagName("body")[0].insertAdjacentHTML("afterbegin", h);
+
+    if (autoclose) {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.closePanel();
+      }, 3000);
+    }
+  },
+  closePanel: function closePanel() {
+    document.getElementById("top_panel").remove();
+  }
+};
