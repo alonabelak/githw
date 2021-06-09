@@ -43,7 +43,7 @@ body {
     max-width: 400px;
     width: 100%;
     background-color: #fff;
-    z-index: 101;
+    z-index: 999;
     -webkit-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease;
@@ -225,7 +225,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 ​ .hamburger--slider {
     .hamburger-inner {
         top: $hamburger-layer-height / 2;
-
         &::before {
             top: $hamburger-layer-height + $hamburger-layer-spacing;
             -webkit-transition-property: opacity, -webkit-transform;

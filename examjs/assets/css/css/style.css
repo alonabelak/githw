@@ -48,7 +48,7 @@ body {
   max-width: 400px;
   width: 100%;
   background-color: #fff;
-  z-index: 101;
+  z-index: 999;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
