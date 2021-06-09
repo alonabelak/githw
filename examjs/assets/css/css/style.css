@@ -213,7 +213,7 @@ header {
   background-color: transparent;
   height: 150px;
   position: fixed;
-  z-index: 1;
+  z-index: 425;
   width: 100%;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -227,7 +227,7 @@ header.fixed {
   box-shadow: 0 0 3px rgba(153, 153, 153, 0.575);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  z-index: 9;
+  z-index: 402;
 }
 header.fixed .header_container {
   height: 40px;
@@ -932,7 +932,7 @@ footer .form {
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%);
-  z-index: 999;
+  z-index: 400;
   background-image: url(../../../img/backform.png);
   background-repeat: no-repeat;
   background-position: center;
