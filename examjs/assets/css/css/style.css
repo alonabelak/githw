@@ -560,6 +560,9 @@ main .latestnews {
   padding: 90px 0 150px 0;
   position: relative;
 }
+main .latestnews .container {
+  padding-bottom: 70px;
+}
 main .latestnews .container .heading h2 {
   text-align: center;
   font-family: "GothamMedium";
