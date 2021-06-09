@@ -30,3 +30,28 @@ map_link.addEventListener('click', function () {
   document.body.append(script);
   script.onload = initMap;
 });
+
+function isValidEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}
+
+;
+var submit = document.getElementById('submit');
+submit.addEventListener('click', sendMessage);
+
+function sendMessage(e) {
+  var email = document.getElementById('email').value;
+  var name = document.getElementById('name').value;
+  e.preventDefault();
+  var BOT_TOKEN = '1818073939:AAGLY-cIgnSwJdG8hAQYLJfeHcD68S62erE';
+  var CHAT_ID = '-1001481769250';
+  var text = 'User ' + name + ' is signed! Email is ' + email;
+
+  if (isValidEmail(email)) {
+    alert("You are signed in! Thank you");
+    $.get('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage?chat_id=' + CHAT_ID + '&text=' + text);
+  } else {
+    alert("Enter valid email");
+  }
+}
