@@ -258,8 +258,8 @@ header .header_container .nav .nav_list a {
 }
 header .header_container .nav .nav_list a::before {
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: 1px solid #fff;
   position: absolute;
@@ -287,8 +287,8 @@ header .header_container .nav ul li a i {
 }
 header .header_container .nav ul li a i::after {
   content: "";
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   border: 1px solid #fff;
   position: absolute;

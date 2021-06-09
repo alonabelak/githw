@@ -214,7 +214,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
         bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
     }
 }
-
 ​ .hamburger--slider {
     .hamburger-inner {
         top: $hamburger-layer-height / 2;
@@ -233,12 +232,10 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
             -o-transition-duration: 0.15s;
             transition-duration: 0.15s;
         }
-
         &::after {
             top: ($hamburger-layer-height * 2) + ($hamburger-layer-spacing * 2);
         }
     }
-
     &.is-active {
         .hamburger-inner {
             $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
@@ -252,7 +249,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
                 transform: rotate(-45deg) translate3d($hamburger-layer-width / -7, $hamburger-layer-spacing * -1, 0);
                 opacity: 0;
             }
-
             &::after {
                 -webkit-transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg);
                 transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg);
@@ -312,8 +308,8 @@ header {
                     text-align: left;
                     &::before{
                         content: '';
-                        width: 7px;
-                        height: 7px;
+                        width: 10px;
+                        height: 10px;
                         border-radius: 50%;
                         border: 1px solid #fff;
                         position: absolute;
@@ -339,11 +335,10 @@ header {
                         color: #fff;
                         text-align: center;
                         position: relative;
-                        
                             &::after {
                             content: '';
-                            width: 25px;
-                            height: 25px;
+                            width: 27px;
+                            height: 27px;
                             border-radius: 50%;
                             border: 1px solid #fff;
                             position: absolute;
