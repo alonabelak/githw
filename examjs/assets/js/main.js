@@ -16,9 +16,6 @@ map_link.addEventListener('click', function(){
         map_link.remove();
         map_pic.remove();
     });
-  
-    
-
     map_link.addEventListener('click', function(){
     let link = document.createElement("link");
     link.setAttribute("rel", "stylesheet");
@@ -28,4 +25,9 @@ map_link.addEventListener('click', function(){
     script.setAttribute("scr","https://unpkg.com/leaflet@1.7.1/dist/leaflet.js");
     document.body.append(script);
     script.onload = initMap;
-})   
+});  
+lightGallery(document.getElementById('lightgallery'), {
+  plugins: [lgZoom, lgThumbnail],
+  speed: 500,
+  
+  });

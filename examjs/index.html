@@ -23,8 +23,10 @@
     <link rel="stylesheet" href="assets/css/fontmedium.css">
     <link rel="stylesheet" href="assets/css/fontello.css">
     <link rel="stylesheet" href="assets/css/lightslider.min.css">  
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/lightgallery/css/lightgallery-bundle.min.css">
 </head>
 <body>
     <div id="mobile_menu_block">
@@ -225,7 +227,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
                         </div>
                         <div class="slider_item">
                             <div class="picture">
@@ -281,42 +282,30 @@
                     <h2>Gallery</h2>
                 </div>
                 <div class="gallery_wrap">
-                    <div class="gallery_big">
-                        <img src="img/gallerybig.png" alt="">
-                        <div class="plus">
-                            <button id="myBtn">
-                                <img src="img/plus2.png" alt="">
-                            </button>
-                            <div class="modal" id="myModal">
-                                <div class="modal-content">
-                                    <span class="close">x</span> 
-                                    <div class="slider_gallery">
-                                        <div class="slider_item">
-                                            <img src="img/gallerybig.png" alt="" >
-                                        </div>
-                                        <div class="slider_item">
-                                            <img src="img/gallerysmall1.png" alt="">
-                                        </div>
-                                        <div class="slider_item">
-                                            <img src="img/gallerysmall2.png" alt="">
-                                        </div>
-                                        <div class="slider_item">
-                                            <img src="img/gallerysmall3.png" alt="">
-                                        </div>
-                                        <div class="slider_item">
-                                            <img src="img/gallerysmall4.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery_small">
-                        <img src="img/gallerysmall1.png" alt="" > 
-                        <img src="img/gallerysmall3.png" alt="">
-                        <img src="img/gallerysmall2.png" alt="">
-                        <img src="img/gallerysmall4.png" alt="">
-                    </div>
+                    <div id="lightgallery" data-lg-size="1600-2400">
+                            <a href="img/gallerybig.png" class="gallery_big">
+                                <img alt="" class src="img/gallerybig.png" />
+                                <img  class="plus" src="img/plus2.png" alt="">
+                            </a>                        
+                            <a href="img/gallerysmall1.png" class="gallery_small1">
+                                <img alt="" class src="img/gallerysmall1.png" />
+                                <img  class="plus" src="img/plus2.png" alt="">
+                            </a>
+                            <a href="img/gallerysmall3.png" class="gallery_small2">
+                                <img alt="" class src="img/gallerysmall3.png" />
+                                <img  class="plus" src="img/plus2.png" alt="">
+                            </a>
+                            <a href="img/gallerysmall2.png" class="gallery_small3">
+                                <img alt="" class src="img/gallerysmall2.png" />
+                                <img  class="plus" src="img/plus2.png" alt="">
+                            </a>
+                            <a href="img/gallerysmall4.png" class="gallery_small4">
+                                <img alt="" class src="img/gallerysmall4.png" />
+                                <img  class="plus" src="img/plus2.png" alt="">
+
+                            </a>
+                            
+                    </div>                          
                     <button>See more</button>
                 </div>
             </div>
@@ -395,6 +384,9 @@
     <script src="assets/js/lightslider.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="assets/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="assets/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
     <script type="text/javascript"> 
     $(document).ready(() => {
         $('.slider').slick({
@@ -416,8 +408,8 @@
             arrows:false,
             dots: true,
             infinite: true,
-            adaptiveHeight:false,
-
+            adaptiveHeight:true,
+            adaptiveWidth:true,
             dotsClass: 'slider-news__dots',
             speed: 500,
             slidesToShow: 3,
@@ -467,14 +459,18 @@
            loop:true,
            thumbItem:9,
            slideMargin:0,
-            enableDrag: true,
+           enableDrag: true,
            
         });  
+        lightGallery(document.getElementById('lightgallery'), {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+        });
+                    
     });
     
 
-    var modal = document.getElementById("myModal");
-
+var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
@@ -504,9 +500,7 @@ window.onclick = function(event) {
                 $(".hamburger").toggleClass("is-active");
                 $("body").toggleClass("open");
             });
-
         });
-        
     </script>
 </body>
 </html>
