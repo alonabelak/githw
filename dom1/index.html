@@ -138,23 +138,23 @@
                 }
                 changeLights();
             }
-        let Colours = ["red", "yellow", "green", "#000"];
+        let Colours = ["#000", "red", "yellow", "green" ];
 
         function changeLights() {
             if (time == 1) {
-                red.style.background = Colours[0];
-                yellow.style.background = Colours[3];
-                green.style.background = Colours[3];
+                red.style.background = Colours[1];
+                yellow.style.background = Colours[0];
+                green.style.background = Colours[0];
             }
             else if (time == 2) {
-                red.style.background = Colours[3];
-                yellow.style.background = Colours[3];
-                green.style.background = Colours[1];
+                red.style.background = Colours[0];
+                yellow.style.background = Colours[0];
+                green.style.background = Colours[2];
             }
             else if (time == 3) {
-                red.style.background = Colours[3];
-                yellow.style.background = Colours[2];
-                green.style.background = Colours[3];
+                red.style.background = Colours[0];
+                yellow.style.background = Colours[3];
+                green.style.background = Colours[0];
             }
         }
     </script>

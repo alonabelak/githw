@@ -1,0 +1,9 @@
+.has_err input {
+    border-color: tomato;
+}
+.has_err select {
+    border-color: tomato;
+}
+.has_err textarea {
+    border-color: tomato;
+}

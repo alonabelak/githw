@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="feedback_form">
+            <div class="mb-3 form_row">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" data-required>
+                <div id="name_err" class="form-text text-danger"></div>
+              </div>
+              <div class="mb-3 form_row">
+                <label for="email" class="form-label">Email address</label>
+                <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" data-required>
+                <div id="email_err" class="form-text text-danger"></div>
+              </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone number</label>
+              <input type="text" class="form-control" id="phone" name="phone" aria-describedby="emailHelp">
+              <div id="phone_err" class="form-text text-danger"></div>
+            </div>
+            <div class="mb-3 form_row">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="msg" data-required></textarea>
+              <div id="message_err" class="form_text text-danger"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="assets/dist/main.dev.js"></script>
+</body>
+</html>
