@@ -1,0 +1,50 @@
+/*-----------------------------------------------------------
+  10. Footer
+-------------------------------------------------------------*/
+footer {
+    background-color: #314584;
+    width: 100%;
+    min-height: 400px;
+    text-align: center;
+    padding: 70px 0px 0px 0px;
+  }
+  footer h5{
+    color: #fff;
+    padding-bottom: 10px;
+  }
+  footer h3{
+    color: #FF3946;
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  .contact-nav li {
+    display: inline;
+    color: #fff;
+  }
+  .contact-nav a {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 20px 20px;
+  }
+  .contact-nav a:hover {
+    color: #FF3946;
+  }
+  footer h6 {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .social li {
+    display: inline;
+  }
+  .social li a {
+    font-size: 2.7rem;
+    color: #fff;
+    margin: 0px 30px;
+  }
+  .social li a:hover {
+    color: #FF3946;
+    transition: all 0.3s ease;
+  }
