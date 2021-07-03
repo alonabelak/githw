@@ -1,11 +1,12 @@
 "use strict";
 
 $('.slider').slick({
+  adaptiveHeight: false,
   slidesToShow: 3,
   speed: 800,
   slidesToScroll: 1,
-  autoplay: true,
-  adaptiveHeight: true,
+  //autoplay: true,
+  //adaptiveHeight:true,
   autoplaySpeed: 3000,
   loop: true,
   draggable: true,
@@ -13,7 +14,26 @@ $('.slider').slick({
   swipe: true,
   arrows: true,
   prevArrow: '<button type="button" class="btn_slick prev"><i class="icon icon-right"></i></button>',
-  nextArrow: '<button type="button" class="btn_slick next"><i class="icon icon-left"></i></button>'
+  nextArrow: '<button type="button" class="btn_slick next"><i class="icon icon-left"></i></button>',
+  responsive: [{
+    breakpoint: 1000,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2
+    }
+  }, {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
 });
 $('#slider_gallery').lightSlider({
   item: 1,
@@ -116,7 +136,7 @@ $(function () {
 
       if ($(this).attr("name") !== "email") {
         $(this).parents(".form_row").removeClass("has_err");
-        $(this).next("div").text("");
+        $("#email_err").text("");
       }
     }
   });
@@ -124,25 +144,55 @@ $(function () {
     if ($(this).val() === "") {
       valid = false;
       $(this).parents(".form_row").addClass("has_err");
-      $(this).next("div").text("Field is required");
+      $("#email_err").text("Field is required");
     } else {
       if (!isValidEmail($(this).val())) {
         $(this).parents(".form_row").addClass("has_err");
-        $(this).next("div").text("Invalid email address");
+        $("#email_err").text("Invalid email address");
       } else {
         $(this).parents(".form_row").removeClass("has_err");
-        $(this).next("div").text("");
+        $("#email_err").text("");
       }
     }
   });
-}); //   let submit = document.getElementById('submit')
-//   submit.addEventListener('click', sendMessage);
+});
+var topPanel = {
+  success: function success() {
+    var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Some text here";
+    var autoclose = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    this.showPanel(text, "success", autoclose);
+  },
+  danger: function danger() {
+    var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Some text here";
+    var autoclose = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    this.showPanel(text, "danger", autoclose);
+  },
+  showPanel: function showPanel(text, type, autoclose) {
+    var btn = autoclose ? "" : '<button onclick="topPanel.closePanel()>&times;</button>';
+    var h = "<div id=\"top_panel\" class=\"panel_".concat(type, "\">\n        <p>").concat(text, "</p>").concat(btn, "<div></div>");
 
-var email = document.getElementById('email').value; //e.preventDefault();
+    if (document.getElementById("top_panel") !== null) {
+      this.closePanel();
+    }
 
+    document.getElementsByTagName("body")[0].insertAdjacentHTML("afterbegin", h);
+
+    if (autoclose) {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.closePanel();
+      }, 3000);
+    }
+  },
+  closePanel: function closePanel() {
+    document.getElementById("top_panel").remove();
+  }
+};
+var useremail = document.getElementById('email').value;
 var BOT_TOKEN = '1818073939:AAGLY-cIgnSwJdG8hAQYLJfeHcD68S62erE';
 var CHAT_ID = '-1001481769250';
-var text = ' User is signed! Email is ' + email;
+var text = ' User is signed! Email is ' + useremail;
 
 function sendMessage($form) {
   var valid = true;
@@ -150,51 +200,42 @@ function sendMessage($form) {
     if ($(this).val() === "") {
       valid = false;
       $(this).parents(".form_row").addClass("has_err");
-      $(this).next("div").text("Field is required");
+      $("#email_err").text("Field is required");
     } else {
       if ($(this).attr("name") === "email") {
         if (!isValidEmail($(this).val())) {
           valid = false;
           $(this).parents(".form_row").addClass("has_err");
-          $(this).next("div").text("Invalid email address");
+          $("#email_err").text("Invalid email address");
         }
       }
     }
   });
+
+  if (valid) {
+    $.ajax({
+      url: "https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage?chat_id=" + CHAT_ID + "&text=" + text,
+      type: "get",
+      success: function success(resp) {
+        if (1 == resp.ok) {
+          topPanel.success("You are signed in!");
+          $('#feedback_form').trigger('reset');
+        } else {
+          topPanel.danger("You are not signed in!");
+        }
+      }
+    }); // .then((resp)=>{
+    //     if(resp.code==200){
+    //         topPanel.success("You are signed in!", true);
+    //         $('#feedback_form').trigger('reset');
+    //     }else{
+    //         topPanel.danger("You are not signed in!");
+    //     }
+    // })
+    // .catch((err)=>{
+    //     topPanel.danger("You are not signed in!");
+    // });
+  }
 }
 
-; // topPanel.success("You are signed in!", true);
-// $.get('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage?chat_id=' + CHAT_ID + '&text=' + text);
-//} //else {
-//   //topPanel.danger("Enter correct email", true);
-// }
-// const topPanel = {
-//     success(text = "Some text here", autoclose = true) {
-//         this.showPanel(text, "success", autoclose);
-//     },
-//     danger(text = "Some text here", autoclose = false) {
-//         this.showPanel(text, "danger", autoclose);
-//     },
-//     showPanel(text, type, autoclose) {
-//         let btn = autoclose
-//             ? ""
-//             : '<button onclick="topPanel.closePanel()>&times;</button>';
-//         let h = `<div id="top_panel" class="panel_${type}">
-//         <p>${text}</p>${btn}<div></div>`;
-//         if (document.getElementById("top_panel") !== null) {
-//             this.closePanel();
-//         }
-//         document
-//             .getElementsByTagName("body")[0]
-//             .insertAdjacentHTML("afterbegin", h);
-//         if (autoclose) {
-//             const _this = this;
-//             setTimeout(function () {
-//                 _this.closePanel();
-//             }, 3000);
-//         }
-//     },
-//     closePanel() {
-//         document.getElementById("top_panel").remove();
-//     },
-// };
+;
