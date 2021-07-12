@@ -6,11 +6,15 @@
           <h5>DOOB</h5>
           <h3>CREATIVITY ABOVE</h3>
           <ul class="contact-nav">
-            <li><a data-scroll href="#home">Home.</a></li>
-            <li><a data-scroll href="#about-us">About Us.</a></li>
-            <li><a data-scroll href="#portfolio">Portfolio.</a></li>
-            <li><a data-scroll href="#blog">Blog.</a></li>
-            <li><a data-scroll href="#contact-us">Contact.</a></li>
+            <li>
+              <router-link to="/home">Home</router-link>
+            </li>
+            <li>
+              <router-link to="/about">About us</router-link>
+            </li>
+            <li>
+              <router-link to="/contacts">Contact us</router-link>
+            </li>
           </ul>
           <h6>© 2019 - Doob,All Right Reserved</h6>
           <ul class="social">
@@ -42,6 +46,11 @@ export default ({
                     title: "Dribbble",
                     icon: "icofont-dribbble",
                     link: "https://dribbble.com"
+                },
+                {
+                  title: "LinkedIn",
+                    icon: "icofont-linkedin",
+                    link: "https://linkedin.com"
                 }
             ]
         }

@@ -135,9 +135,10 @@ p {
 /*-----------------------------------------------------------
   3. Buttons & Links
 -------------------------------------------------------------*/
-.contact-btn button {
+.contact-btn button, .btn {
   width: 200px;
   height: 60px;
+  line-height: 60px;
   border: 0px;
   -webkit-box-shadow: 0px 4px 6px 0px rgba(30,32,33,0.07);
   -moz-box-shadow: 0px 4px 6px 0px rgba(30,32,33,0.07);
@@ -558,7 +559,16 @@ textarea {
   color: #314584;
   font-weight: 600;
 }
-
+#nprogress .bar {
+  background: #FF3946!important;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #FF3946, 0 0 5px #FF3946!important;
+}
+#nprogress .spinner-icon {
+  border-top-color: #FF3946!important;
+  border-left-color: #FF3946!important;
+}
 /*-----------------------------------------------------------
   11. Responsive
 -------------------------------------------------------------*/

@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "vodal": "^2.4.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-extend-layout": "^2.0.6",
+    "vue-router": "^3.2.0",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -22,12 +25,13 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^5.0.0",
+    "nprogress": "^0.2.0",
     "postcss": "^7.0.36",
     "sass": "^1.22.10",
     "sass-loader": "^7.3.1",
     "vue-cli-plugin-axios": "0.0.4",
     "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.0.0"
+    "webpack": "^4.1.0"
   },
   "eslintConfig": {
     "root": true,

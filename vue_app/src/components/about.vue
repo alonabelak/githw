@@ -1,20 +1,24 @@
 <template>
-    <!-- ABOUT SECTION -->
-  <section class="about">
+   <section class="about">
     <div class="container">
-      <services></services>
-      <about></about>
-
+      <div class="row">
+        <div class="col-12 col-sm-12 col-lg-6">
+          <img src="../assets/images/aboutimg.svg" alt="">
+        </div>
+        <div class="col-12 col-sm-12 col-lg-6">
+          <h5>OUR COMPANY</h5>
+          <h2>Some Fine<br>Words About Us</h2>
+          <!-- Replace About Us Text Under -->
+          <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt.Vestibulum ac diam sit amet.Quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt.</p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 <script>
-import Services from '../components/services.vue';
-import About from '../components/about.vue'
+
 export default ({
-  components: {
-      Services,
-      About,
-  }
+    name:"About"
+  
 })
 </script>

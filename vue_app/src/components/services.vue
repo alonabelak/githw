@@ -6,7 +6,7 @@
         <img src="../assets/images/aside.svg" alt="">
       </div>
       <div class="side2-img"> 
-        <img src="../assets/images/aside2.svg" alt="">
+        <!-- <img src="../assets/images/aside2.svg" alt=""> -->
       </div>
       <div class="container">
         <div class="row">
